@@ -6,15 +6,6 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/shankar1016/Terraform.git'
             }
         }
-        stage('Check Terraform Installation') {
-            steps {
-                script {
-                    // Check if Terraform is installed
-                    def terraformVersion = sh(script: 'terraform --version', returnStdout: true).trim()
-                    echo "Terraform version: ${terraformVersion}"
-                }
-            }
-        }
         stage('Terraform Init') {
             steps {
                 script {

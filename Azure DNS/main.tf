@@ -25,7 +25,7 @@ resource "azurerm_virtual_network_peering" "vnet1" {
 }
 
 resource "azurerm_virtual_network_peering" "vnet2" {
-  name                      = var.vnet1_name
+  name                      = var.vnet2_name
   resource_group_name       = azurerm_resource_group.rg.name
   virtual_network_name      = azurerm_virtual_network.test2.name
   remote_virtual_network_id = azurerm_virtual_network.test1.id
